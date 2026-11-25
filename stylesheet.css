@@ -195,6 +195,7 @@ main p{
       color: rgb(0, 153, 255);
     font-weight: bolder;
     font-size: 30px;
+  margin-left:10px;
 }
 /* Individual link styling */
 .top-sec .nav-links li a {
