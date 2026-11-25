@@ -1,0 +1,659 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+}
+
+/* --- TOP HORIZONTAL NAVIGATION (.top-first) --- */
+.top-first {
+    background-color: #d6dcf0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #b8c2e0;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body {
+  font-family: "Nunito Sans", "Source Sans 3", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.top-first .navs ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.top-first .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-first .navs ul li a {
+    text-decoration: none;
+    color: #002421;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 7px;
+    border-left-style:groove;
+    shape-outside: margin-box;
+    border-left-width: 1px;     
+    border-left-color: #3498db;
+    
+}
+
+/* --- MAIN LAYOUT (SIDEBAR + CONTENT) --- */
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 62px); /* Full height minus top header */
+}
+
+/* --- LEFT VERTICAL SIDEBAR (.top-sec) --- */
+.top-sec {
+    width: 220px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-btn {
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.top-sec .nav-links {
+    display: flex;
+    flex-direction: column; /* Stacks links vertically */
+    list-style: none;
+    height: 100%;
+
+  
+}
+
+.top-sec .nav-links li a {
+    display: block;
+    flex: 1;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    border-bottom: 1px solid #ececec;
+    transition: background-color 0.2s;
+}
+
+.top-sec .nav-links li a:hover {
+    background-color: #eef3f8;
+}
+
+/* Active link indicator moved to the left border */
+.top-sec .nav-links li a.active {
+    background-color: #eef3f8;
+    border-left: 4px solid #1976d2;
+    color: #1976d2;
+}
+
+/* --- RIGHT CONTENT AREA --- */
+.content-area {
+    flex: 1;
+    padding: 25px;
+   
+}
+/* =========================================
+   LEFT VERTICAL SIDEBAR (.top-sec)
+   ========================================= */
+.top-sec {
+
+
+      position: fixed;
+  top: 0;
+  left: 0;
+  width:6%;
+  height: 100dvh; /* Uses 100% of the device's visible viewport height */
+  overflow-y: auto;
+
+
+
+    width: 240px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Three-dots button at the top of the sidebar */
+.top-sec .menu-btn {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #64748b;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #e2e8f0;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.top-sec .menu-btn:hover {
+    color: #1976d2;
+    background-color: #f8fafc;
+}
+
+
+.special-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: #e4e5e6;
+}
+
+main{
+    margin-top: 6px;
+    margin-left: 250px;
+    background-color: #1e293b;
+}
+
+main p{
+    color: #020e29;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Vertical list container */
+.top-sec .nav-links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+}
+.fa-solid{
+    color: rgb(0, 157, 255);
+    font-weight: bolder;
+    font-size: 30px;
+}
+.fa-brands{
+      color: rgb(0, 153, 255);
+    font-weight: bolder;
+    font-size: 30px;
+}
+/* Individual link styling */
+.top-sec .nav-links li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 0.98rem;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.top-sec .nav-links li a:hover {
+    background-color: #f1f5f9;
+    color: #1976d2;
+    padding-left: 28px;
+}
+
+/* Active tab styling */
+.top-sec .nav-links li a.active {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-left: 4px solid #1976d2;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   1. CONTENT AREA CONTAINER
+   ========================================= */
+.content-area {
+    flex: 1;
+    padding: 32px;
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.nav-links{
+ position: fixed;
+  top:120px;
+  left: 0;
+  z-index: 1000;
+}
+
+/* =========================================
+   2. UNIFORM SECTION STYLING (.Main1, .Main2, .Main3)
+   ========================================= */
+.Main1,
+.Main2,
+.Main3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   3. IDENTICAL CARD STYLING FOR ALL ITEMS
+   ========================================= */
+.Main11,
+.Main12,
+.Main13,
+.Main14,
+.Main21,
+.Main22,
+.Main23,
+.Main24,
+.Main31,
+.Main32,
+.Main33 {
+    flex: 1 1 220px;
+    min-height: 200px;
+    background-color: #f8fafc;
+    border: 1px solid #a9c6ea;
+    border-radius: 10px;
+    padding: 18px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+
+.Main33 img{
+    width: 50%;
+} */
+/* Inner wrapper inside .Main11 */
+.Main11 > div {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   4. UNIFORM IMAGE STYLING FOR ALL CARDS
+   ========================================= */
+.content-area img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   5. RESPONSIVE MOBILE VIEW
+   ========================================= */
+@media (max-width: 768px) {
+    .content-area {
+        padding: 20px 16px;
+    }
+
+    .Main1,
+    .Main2,
+    .Main3 {
+        padding: 16px;
+    }
+
+    .Main11,
+    .Main12,
+    .Main13,
+    .Main14,
+    .Main21,
+    .Main22,
+    .Main23,
+    .Main24,
+    .Main31,
+    .Main32,
+    .Main33 {
+        flex: 1 1 100%;
+        min-height: 170px;
+    }
+}
+
+
+
+/* Main Footer Wrapper */
+.site-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 4rem 1.5rem 2rem;
+  border-top: 1px solid #1e293b;
+  margin-left: 250px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Multi-Column Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Brand & Bio Section */
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 300px;
+}
+
+/* Social Media Icons */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Navigation Columns */
+.footer-links h3,
+.footer-newsletter h3 {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f8fafc;
+}
+
+/* Newsletter Form */
+.footer-newsletter p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  background-color: #1e293b;
+  color: #f8fafc;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.newsletter-form input:focus {
+  border-color: #3b82f6;
+}
+
+.newsletter-form button {
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #2563eb;
+}
+
+/* Bottom Copyright & Legal Bar */
+.footer-bottom {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.legal-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.legal-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #f8fafc;
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+/* ================= HERO BANNER SECTION ================= */
+.hero-banner {
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #172554 100%);
+  color: #f8fafc;
+  padding: 3.5rem 5%;
+  border-bottom: 2px solid #3b82f6;
+
+  margin-left: 250px;
+}
+
+.banner-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.hero-banner {
+  position: relative;
+  isolation: isolate;
+  min-height: 550px; /* Ensures the banner has visible height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 3rem 5%;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/front\ end/images/dsa.webp"); /* Replace with your actual image name */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+.banner-badge {
+  display: inline-block;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #bed2eb;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 2.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 50px;
+}
+
+.hero-banner h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.hero-banner p {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 auto 1.75rem;
+  max-width: 650px;
+}
+
+.banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #f8fafc;
+  border: 1px solid #475569;
+}
+
+.btn-secondary:hover {
+  border-color: #f8fafc;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 600px) {
+  .hero-banner {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.65rem;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+  }
+}
