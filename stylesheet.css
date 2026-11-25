@@ -11,7 +11,8 @@ body {
   max-width: 100%;
   overflow-x: hidden; /* Prevents accidental horizontal scrolling */
 }
-
+.banner-badge{
+  border-radius:8px;
 /* --- TOP HORIZONTAL NAVIGATION (.top-first) --- */
 .top-first {
     background-color: #d6dcf0;
