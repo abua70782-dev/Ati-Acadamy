@@ -11,19 +11,23 @@ body {
   max-width: 100%;
   overflow-x: hidden; /* Prevents accidental horizontal scrolling */
 }
-.banner-badge{
-  border-radius:8px;
+
+.banner-badge {
+  border-radius: 8px;
+}
+
 /* --- TOP HORIZONTAL NAVIGATION (.top-first) --- */
 .top-first {
-    background-color: #d6dcf0;
-    padding: 10px 20px;
-    border-bottom: 1px solid #b8c2e0;
-   position: fixed;
+  background-color: #d6dcf0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #b8c2e0;
+  position: fixed;
   top: 0;
   left: 10px;
   width: 100%;
   z-index: 1000;
 }
+
 body {
   font-family: "Nunito Sans", "Source Sans 3", Arial, sans-serif;
   font-size: 16px;
@@ -32,39 +36,39 @@ body {
 }
 
 .top-first .navs ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
 }
 
 .top-first .logo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .top-first .navs ul li a {
-    text-decoration: none;
-    color: #002421;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding-left: 7px;
-    border-left-style:groove;
-    shape-outside: margin-box;
-    border-left-width: 1px;     
-    border-left-color: #3498db;
-    
+  text-decoration: none;
+  color: #002421;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 7px;
+  border-left-style: groove;
+  shape-outside: margin-box;
+  border-left-width: 1px;
+  border-left-color: #3498db;
 }
 
 /* --- MAIN LAYOUT (SIDEBAR + CONTENT) --- */
 .main-layout {
-    display: flex;
-    min-height: calc(100vh - 62px); /* Full height minus top header */
+  display: flex;
+  min-height: calc(100vh - 62px); /* Full height minus top header */
 }
+
 
 /* --- LEFT VERTICAL SIDEBAR (.top-sec) --- */
 .top-sec {
