@@ -23,7 +23,7 @@ body {
   border-bottom: 1px solid #b8c2e0;
   position: fixed;
   top: 0;
-  left: 10px;
+  left: 0;
   width: 100%;
   z-index: 1000;
 }
